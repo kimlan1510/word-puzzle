@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 
   console.log(split_para);
-  debugger;
+
   split_para.forEach(function(word) {
     word_array.splice(0, 1, word) ;
     character = word_array[0].split("");
@@ -36,6 +36,13 @@ $(document).ready(function(){
     // console.log(para_noVowel);
   });
   var para_noVowel_join = para_noVowel.join(" ");
+
+  $("button").click(function(){
+    $("#editing").hide();
+    $("#no_vowels").text(para_noVowel_join);
+  });
+
+
   console.log(para_noVowel_join);
   // console.log(word_array);
 
